@@ -1,0 +1,196 @@
+JG MARKETING — PORTFÓLIO + CURRÍCULO
+João Guilherme · Teresina–PI
+============================================================
+
+
+0. ESTE PROJETO ESTÁ PRONTO PARA O GITHUB
+------------------------------------------------------------
+Já inclui README.md, LICENSE, .gitignore e um fluxo de
+publicação automática em .github/workflows/pages.yml.
+
+Para subir:
+   git init
+   git add .
+   git commit -m "Portfolio JG Marketing"
+   git branch -M main
+   git remote add origin https://github.com/SEU-USUARIO/jg-marketing-portfolio.git
+   git push -u origin main
+
+Depois: Settings > Pages > Source: GitHub Actions.
+O site publica sozinho a cada push.
+
+A FOTO: assets/retrato.webp. Para trocar, substitua o arquivo
+mantendo a proporcao 4:5 (ex.: 1000x1250).
+
+
+1. COMO ABRIR AGORA
+------------------------------------------------------------
+Descompacte o ZIP e dê dois cliques em index.html.
+Funciona sem internet, sem instalar nada.
+
+
+2. COMO COLOCAR NO AR
+------------------------------------------------------------
+Netlify (grátis, recomendado):
+   1. Entre em app.netlify.com
+   2. Arraste a PASTA inteira para a área "Deploy manually"
+   3. Pronto — o site sobe em segundos com HTTPS
+
+Hospedagem comum (cPanel, Hostinger etc.):
+   Envie TODOS os arquivos e as pastas assets/, css/ e js/
+   para a pasta public_html, mantendo a estrutura igual.
+   O arquivo inicial precisa continuar se chamando index.html.
+
+Depois de publicar, troque o endereço de exemplo
+"https://jgmarketing.com.br/" pelo seu domínio real em:
+   - index.html  →  linhas com "canonical" e "og:url"
+   - sitemap.xml
+   - robots.txt
+
+
+3. O QUE MUDOU EM RELAÇÃO À v7
+------------------------------------------------------------
+PESO
+   index.html: 1,34 MB  →  67 KB
+   Imagens saíram de dentro do HTML (estavam em base64,
+   duplicadas) e voltaram a ser arquivos na pasta assets/.
+   A captura de insights virou WebP: 325 KB → 45 KB.
+
+CÓDIGO
+   Antes: 1 HTML gigante + portfolio-polish.css +
+   portfolio-enhancements.js + remendos "v11/v12" escritos
+   dentro do próprio HTML, brigando entre si.
+   Agora: 1 HTML + 2 CSS + 1 JS, sem sobreposições.
+
+VISUAL
+   Nova direção: preto neutro de monitor, o azul exato da
+   sua logo e laranja usado só onde significa oferta.
+   Tipografia: Archivo Expanded nos títulos, IBM Plex Sans
+   no texto e IBM Plex Mono em todo número e rótulo.
+
+NAVEGAÇÃO (elemento novo)
+   Uma timeline de edição fixa no rodapé: a página inteira
+   vira um vídeo. O cursor acompanha a rolagem, cada seção
+   é um capítulo com marcador — dá para clicar, arrastar e
+   navegar pelo teclado (setas, Home, End).
+
+IMAGENS
+   Zero fotos de banco de imagens. Os seis cartões de
+   "Formatos" são desenhados em CSS (enquadramento 9:16,
+   selo de preço, catálogo, grade de feed, gráfico).
+   Nada depende de internet nem some se um link cair.
+
+FONTES
+   Hospedadas junto com o site (pasta assets/fonts).
+   Carrega mais rápido, funciona offline e não envia dados
+   dos seus visitantes para servidores de terceiros.
+
+BUSCA NO GOOGLE
+   Dados estruturados (empresa + perguntas frequentes),
+   sitemap.xml, robots.txt e imagem de compartilhamento
+   pronta (assets/og-cover.jpg) para WhatsApp e Instagram.
+
+ACESSIBILIDADE
+   Foco de teclado visível, Esc fecha tudo, foco preso
+   dentro das janelas, respeito a "reduzir movimento" e
+   HTML válido.
+
+NOVIDADES DE USO
+   - Link "Salvar em PDF" no rodapé: o portfólio vira uma
+     proposta impressa, com layout próprio para papel.
+   - O briefing salva rascunho no aparelho do visitante e
+     avisa quais campos faltam antes de abrir o WhatsApp.
+   - Cada botão de WhatsApp abre uma mensagem diferente,
+     de acordo com onde a pessoa clicou.
+   - Diagnóstico de 3 toques recomenda um pacote e já
+     preenche o briefing.
+
+
+4. ONDE EDITAR CADA COISA
+------------------------------------------------------------
+index.html          textos, seções, preços, perguntas
+css/style.css       cores e espaçamentos (bloco ":root",
+                    logo no início do arquivo)
+css/fonts.css       fontes (não precisa mexer)
+js/app.js           comportamento; o número do WhatsApp e o
+                    Instagram ficam no topo, em WA e IG
+assets/             imagens dos perfis e a capa de partilha
+
+Para trocar o WhatsApp: procure por 5586994432717.
+Ele aparece em index.html e em js/app.js.
+
+Para mudar as cores: abra css/style.css e edite as linhas
+--blue, --flame, --ink e --paper no começo do arquivo.
+Todo o site se ajusta sozinho.
+
+
+5. NÚMEROS PUBLICADOS NO SITE
+------------------------------------------------------------
+Estes valores aparecem em vários pontos da página. Se mudarem,
+procure por eles no index.html e troque em TODOS os lugares:
+
+   30 milhões de visualizações  -> aparece 5x
+   300 mil leads captados       -> aparece 4x
+   8.481.676 (Reel ConstruRapi) -> aparece 3x
+   5.405.040 contas alcançadas  -> aparece 2x
+
+A imagem de compartilhamento (assets/og-cover.jpg) também traz
+esses números. Se atualizar o site, atualize a imagem.
+
+
+6. O QUE VOCÊ PRECISA CONFERIR ANTES DE PUBLICAR
+------------------------------------------------------------
+Escrevi a seção "Trajetória" com o que já conversamos, mas
+alguns campos precisam do seu olho. Procure no index.html por:
+
+   "Atual"        -> troque pelo período real (ex.: "2024 — hoje")
+   "Anterior"     -> troque pelo período no varejo de construção
+   "2022 — 2023"  -> confirme as datas da Syslae Solutions
+
+Na seção "Competências", confira a lista de ferramentas de cada
+cartão e tire o que você não usa de fato. Procure por
+<ul class="skill__list"> — cada item é uma ferramenta.
+
+NÃO incluí formação acadêmica porque não tenho essa informação
+confirmada. Se quiser adicionar, copie um bloco <li class="road__item">
+da Trajetória e adapte.
+
+
+5.1 SOBRE O EX-EMPREGADOR
+------------------------------------------------------------
+Removi do site tudo que identifica a empresa de material de
+construção onde você trabalhou:
+
+  - o nome, em todos os textos
+  - a captura do perfil no Instagram (assets/construrapi.webp)
+  - a captura do painel de insights, que trazia o nome das
+    contas escrito na imagem (assets/insights-8m.webp)
+
+No lugar da captura entrou um painel de desempenho desenhado
+em CSS, com os mesmos números e nenhuma identificação.
+
+ATENÇÃO — decisão que é sua, não minha:
+Os números continuam no site (8.481.676 visualizações, alcance,
+retenção, taxa de compartilhamento). Curtidas, comentários e
+visualizações de um Reel publicado são dados públicos. Já
+alcance, tempo médio, salvamentos, taxa de reels pulados e
+ganho de seguidores só aparecem no painel interno da conta.
+
+Eu não tenho como ler seu contrato. Se a cláusula cobrir dados
+de desempenho, me avise que eu troco tudo por uma formulação
+sem número, do tipo "Reel de alcance nacional para o setor de
+varejo de construção". Se cobrir só o nome e a marca, o site
+já está adequado do jeito que está.
+
+
+7. CONTATOS CONFIGURADOS
+------------------------------------------------------------
+WhatsApp    (86) 99443-2717
+Instagram   https://www.instagram.com/jgmarketing__/
+E-mail      joguilherme036@gmail.com
+
+
+8. LICENÇAS
+------------------------------------------------------------
+Fontes Archivo e IBM Plex: licença OFL 1.1, uso comercial
+liberado. Textos das licenças em assets/fonts/.
